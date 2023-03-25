@@ -5,16 +5,12 @@ import java.time.LocalDate;
 public class Supplier {
     private String sID;
     private String sName;
-    private LocalDate orderDate;
-    private LocalDate deliveryDate;
     private double totalPrice;
 
-    public Supplier(String sID, String sName, LocalDate orderDate, LocalDate deliveryDate, double totalPrice)
+    public Supplier(String sID, String sName, double totalPrice)
     {
         this.sID = sID;
         this.sName = sName;
-        this.orderDate = orderDate;
-        this.deliveryDate = deliveryDate;
         this.totalPrice = totalPrice;
     }
 
@@ -28,16 +24,6 @@ public class Supplier {
         return sName;
     }
 
-    public LocalDate getOrderDate()
-    {
-        return orderDate;
-    }
-
-    public LocalDate getDeliveryDate()
-    {
-        return deliveryDate;
-    }
-
     public double getTotalPrice()
     {
         return totalPrice;
@@ -49,8 +35,6 @@ public class Supplier {
         return "Supplier{" +
                 "sID='" + sID + '\'' +
                 ", sName='" + sName + '\'' +
-                ", orderDate=" + orderDate +
-                ", deliveryDate=" + deliveryDate +
                 ", totalPrice=" + totalPrice +
                 '}';
     }
